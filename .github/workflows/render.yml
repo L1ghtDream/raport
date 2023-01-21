@@ -21,6 +21,9 @@ jobs:
       - name: "Updating raport"
         run: |
           python3 render.py
+          git pull https://github.com/L1ghtDream/raport
+          mv README.md raport/README.md
+          cd raport
           git add *
           git config --global user.email "admin@voinearadu.com"
           git config --global user.name "Radu Voinea"
