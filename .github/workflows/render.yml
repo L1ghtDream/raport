@@ -21,7 +21,7 @@ jobs:
       - name: "Updating raport"
         run: |
           python3 render.py
-          git pull https://github.com/L1ghtDream/raport
+          git clone https://github.com/L1ghtDream/raport
           mv README.md raport/README.md || exit 0
           cd raport
           git add *
