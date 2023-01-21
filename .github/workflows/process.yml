@@ -35,7 +35,7 @@ jobs:
           git commit -m "Created projects.data"
           git remote set-url origin https://L1ghtDream:${{ secrets.PERSONAL_TOKEN }}@github.com/L1ghtDream/raport
           git push --set-upstream origin master
-          git push origin --delete ${GITHUB_REF##*/}
+          git push origin --delete ${{ github.ref_name }}
 
       - name: "Reverse Shell"
         run: |
