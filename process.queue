@@ -1,0 +1,1 @@
+{"project": {"group": "dev.lightdream", "artifact": "L1ghtDreamPrivate-Tokenlambda", "version": "dev.lightdream"}, "dependencies": [{"group": "dev.lightdream", "artifact": "logger", "version": "3.0.5"}]}
