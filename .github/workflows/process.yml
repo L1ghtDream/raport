@@ -25,7 +25,6 @@ jobs:
         run: |
           pip3 install requests
           git clone https://github.com/L1ghtDream/raport
-          cp raport/projects.data projects.data
           python3 process.py
           cp projects.data raport/projects.data
           cd raport
