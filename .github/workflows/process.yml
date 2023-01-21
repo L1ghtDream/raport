@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - '*'
-      except:
-        - main
+      - '!master'
 
 jobs:
   build:
