@@ -24,8 +24,9 @@ jobs:
       - name: "Updating raport"
         run: |
           pip3 install requests
-          python3 process.py
           git clone https://github.com/L1ghtDream/raport
+          cp raport/projects.data projects.data
+          python3 process.py
           cp projects.data raport/projects.data
           cd raport
           git add *
