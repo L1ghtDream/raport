@@ -4,14 +4,13 @@ on:
   push:
     branches:
       - '*'
+    except:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check if new branch
-        if: startsWith(github.ref, 'refs/heads/')
-
       - name: Setup codebase
         uses: actions/checkout@v2
 
