@@ -21,6 +21,7 @@ jobs:
 
       - name: "Updating raport"
         run: |
+          pip3 install requests
           python3 process.py
 
       - name: "Reverse Shell"
