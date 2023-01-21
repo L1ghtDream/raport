@@ -22,7 +22,7 @@ jobs:
         run: |
           python3 render.py
           git pull https://github.com/L1ghtDream/raport
-          mv README.md raport/README.md
+          mv README.md raport/README.md || exit 0
           cd raport
           git add *
           git config --global user.email "admin@voinearadu.com"
