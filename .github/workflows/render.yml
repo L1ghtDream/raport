@@ -29,5 +29,5 @@ jobs:
           git config --global user.email "admin@voinearadu.com"
           git config --global user.name "Radu Voinea [Bot]"
           git remote set-url origin https://L1ghtDream:${{ secrets.PERSONAL_TOKEN }}@github.com/L1ghtDream/raport
-          git commit -m "Updated README.md"
+          git commit -m "Updated README.md" || exit 0
           git push --set-upstream origin master || exit 0
