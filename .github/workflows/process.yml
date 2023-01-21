@@ -27,7 +27,6 @@ jobs:
           git clone https://github.com/L1ghtDream/raport
           python3 process.py
           cp projects.data raport/projects.data
-          cat projects.data
           cd raport
           git add *
           git config --global user.email "admin@voinearadu.com"
