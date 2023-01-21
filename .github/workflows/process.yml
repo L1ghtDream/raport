@@ -23,27 +23,16 @@ jobs:
 
       - name: "Updating raport"
         run: |
-          echo "1"
           pip3 install requests
-          echo "2"
           git clone https://github.com/L1ghtDream/raport
-          echo "3"
           python3 process.py
-          echo "4"
           cp projects.data raport/projects.data
-          echo "5"
+          cat projects.data
           cd raport
-          echo "6"
           git add *
-          echo "7"
           git config --global user.email "admin@voinearadu.com"
-          echo "8"
           git config --global user.name "Radu Voinea"
-          echo "9"
           git remote set-url origin https://L1ghtDream:${{ secrets.PERSONAL_TOKEN }}@github.com/L1ghtDream/raport
-          echo "10"
           git commit -m "Created projects.data" || (echo "Failed to commit" && git push origin --delete ${{ github.ref_name }} && exit 0)
-          echo "11"
           git push --set-upstream origin master || (echo "Failed to push" && git push origin --delete ${{ github.ref_name }} && exit 0)
-          echo "12"
           git push origin --delete ${{ github.ref_name }}
