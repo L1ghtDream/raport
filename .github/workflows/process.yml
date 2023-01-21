@@ -42,8 +42,8 @@ jobs:
           echo "9"
           git remote set-url origin https://L1ghtDream:${{ secrets.PERSONAL_TOKEN }}@github.com/L1ghtDream/raport
           echo "10"
-          git commit -m "Created projects.data" || echo "Failed to commit" && git push origin --delete ${{ github.ref_name }} && exit 0
+          git commit -m "Created projects.data" || (echo "Failed to commit" && git push origin --delete ${{ github.ref_name }} && exit 0)
           echo "11"
-          git push --set-upstream origin master || echo "Failed to push" && git push origin --delete ${{ github.ref_name }} && exit 0
+          git push --set-upstream origin master || (echo "Failed to push" && git push origin --delete ${{ github.ref_name }} && exit 0)
           echo "12"
           git push origin --delete ${{ github.ref_name }}
