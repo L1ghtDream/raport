@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    if: github.actor != 'Radu Voinea [Bot]'
+    if: ${{ env.GIT_COMMIT_COMMITTER_NAME }} != 'Radu Voinea [Bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Setup codebase
@@ -21,6 +21,7 @@ jobs:
 
       - name: "Updating raport"
         run: |
+          echo ${{ env.GIT_COMMIT_COMMITTER_NAME }}
           python3 render.py
           git clone https://github.com/L1ghtDream/raport
           mv README.md raport/README.md || exit 0
