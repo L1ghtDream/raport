@@ -31,9 +31,6 @@ def shell(command):
 def getLatest(group, artifact):
     URL = API.replace("{group_id}", group).replace("{artifact_id}", artifact)
 
-    print(URL)
-    print(requests.get(url=URL).json())
-
     return requests.get(url=URL).json()["items"][0]["maven2"]["version"]
 
 for dependency in dependencies:
