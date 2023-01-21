@@ -29,11 +29,9 @@ def shell(command):
     os.system(command)
 
 def getLatest(group, artifact):
-    return requests.get(
-        url=API \
-        .replace("{group_id}", group) \
-        .replace("{artifact_id}", artifact)
-    ).json()["items"][0]["maven2"]["version"]
+    URL = API .replace("{group_id}", group).replace("{artifact_id}", artifact)
+
+    return requests.get(url=URL).json()["items"][0]["maven2"]["version"]
 
 for dependency in dependencies:
     latest =  getLatest(dependency["group"], dependency["artifact"])
