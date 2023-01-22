@@ -1,8 +1,9 @@
-# usage [artifact] [version] [github_access_token]
+# sh update_raport.sh [raport_url] [artifact] [version] [github_access_token]
 
-ARTIFACT=$1
-VERSION=$2
-TOKEN=$3
+RAPORT_URL=$1
+ARTIFACT=$2
+VERSION=$3
+TOKEN=$4
 
 wget https://raw.githubusercontent.com/L1ghtDream/raport/cdn/dependencies.py
 python3 dependencies.py
