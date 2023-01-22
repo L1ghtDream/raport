@@ -16,7 +16,7 @@ def createFolder(folder):
     if not os.path.exists(folder):
         os.makedirs(folder)
 
-shell(f"./gradlew dependencies --configuration runtimeClasspath > {DEPENDENCIES_OUTPUT}")
+shell(f"gradle dependencies --configuration runtimeClasspath > {DEPENDENCIES_OUTPUT}")
 shell(f"gradle properties -q | grep \"^name:\" | awk '{{print $2}}' > {ARTIFACT_OUTPUT}")
 shell(f"gradle properties -q | grep \"^version:\" | awk '{{print $2}}' > {VERSION_OUTPUT}")
 shell(f"gradle properties -q | grep \"^group:\" | awk '{{print $2}}' > {GROUP_OUTPUT}")
