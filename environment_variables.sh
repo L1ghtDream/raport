@@ -1,4 +1,4 @@
-# enviroment_variables.sh [repository_name]
+# environment_variables.sh [repository_name]
 
 REPOSITORY_NAME=$1
 
