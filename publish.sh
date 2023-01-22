@@ -21,6 +21,9 @@ self.auth.username = admin
 self.auth.password = $SELF_PASSWORD
 " > ~/.gradle/gradle.properties
 
+echo "Publishing to GitHub"
 gradle publishGitHub || echo "Failed to publish to GitHub"
+echo "Publishing to GitLab"
 gradle publishGitLab || echo "Failed to publish to GitLab"
+echo "Publishing to Self hosted repository"
 gradle publishSelf || echo "Failed to publish to Self hosted repository"
