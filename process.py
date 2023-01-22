@@ -15,12 +15,11 @@ dependencies = payload["dependencies"]
 
 cache = []
 
-# Create file if does not exist
-open(PROJECTS_DATA, "w+") 
-
-raw_report_payload = open(PROJECTS_DATA, "r").read()
-if raw_report_payload == "":
-    raw_report_payload = "[]"
+raw_report_payload = ""
+try:
+  raw_report_payload = open(PROJECTS_DATA, "r").read()
+except:
+  raw_report_payload = "[]"
 
 report_payload = json.loads(raw_report_payload)
 report_dependencies = []
