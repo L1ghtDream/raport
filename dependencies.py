@@ -5,7 +5,7 @@ TRACKING_GROUPS=["dev.lightdream", "com.pokeninjas"]
 DEPENDENCIES_OUTPUT = "dependencies.output"
 ARTIFACT_OUTPUT = "artifact.output"
 VERSION_OUTPUT = "version.output"
-GROUP = "group.output"
+GROUP_OUTPUT = "group.output"
 PROCESS_DATA = "process.data"
 
 
@@ -19,13 +19,13 @@ def createFolder(folder):
 shell(f"./gradlew dependencies --configuration runtimeClasspath > {DEPENDENCIES_OUTPUT}")
 shell(f"gradle properties -q | grep \"^name:\" | awk '{{print $2}}' > {ARTIFACT_OUTPUT}")
 shell(f"gradle properties -q | grep \"^version:\" | awk '{{print $2}}' > {VERSION_OUTPUT}")
-shell(f"gradle properties -q | grep \"^group:\" | awk '{{print $2}}' > {VERSION_OUTPUT}")
+shell(f"gradle properties -q | grep \"^group:\" | awk '{{print $2}}' > {GROUP_OUTPUT}")
 
 raw_dependencies = open(f"{DEPENDENCIES_OUTPUT}", "r").read()
 
 project_artifact = open(f"{ARTIFACT_OUTPUT}", "r").read().replace("\n", "")
 project_version = open(f"{VERSION_OUTPUT}", "r").read().replace("\n", "")
-project_group = open(f"{VERSION_OUTPUT}", "r").read().replace("\n", "")
+project_group = open(f"{GROUP_OUTPUT}", "r").read().replace("\n", "")
 
 print("Artifact: " + project_artifact)
 print("Version: " + project_version)
