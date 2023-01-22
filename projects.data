@@ -1,1 +1,1 @@
-[{"project": {"group": "dev.lightdream", "artifact": "lambda", "version": "3.7.2"}, "dependencies": [{"group": "dev.lightdream", "artifact": "logger", "version": "3.0.5", "latest": "3.0.5"}]}]
+[{"project": {"group": "dev.lightdream", "artifact": "logger", "version": "3.1.0"}, "dependencies": []}]
