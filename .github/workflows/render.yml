@@ -23,12 +23,12 @@ jobs:
           wget -O tmp-render.py tmp https://raw.githubusercontent.com/L1ghtDream/report/cdn/render.py
 
           python3 tmp-render.py
-          git clone https://github.com/L1ghtDream/raport
+          git clone https://github.com/L1ghtDream/report
           mv README.md report/README.md || exit 0
           cd report
           git add *
           git config --global user.email "admin@voinearadu.com"
           git config --global user.name "Radu Voinea [Bot]"
-          git remote set-url origin https://L1ghtDream:${{ secrets.PERSONAL_TOKEN }}@github.com/L1ghtDream/raport
+          git remote set-url origin https://L1ghtDream:${{ secrets.PERSONAL_TOKEN }}@github.com/L1ghtDream/report
           git commit -m "Updated README.md" || exit 0
           git push --set-upstream origin master || exit 0
