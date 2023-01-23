@@ -72,7 +72,7 @@ def main():
 
     for entry in dependencies_entries:
         tree_depth = int(starting_spaces(entry)/4)
-        entry = entry.replace(" ", "").replace("-", "").replace(">", "")
+        entry = entry.replace(" ", "").replace("-", "").replace(">", "").replace("(*)", "")
 
         group = entry.split(":")[0]
         artifact = entry.split(":")[1]
