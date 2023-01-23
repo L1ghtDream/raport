@@ -20,7 +20,7 @@ jobs:
 
       - name: "Updating report"
         run: |
-          wget -O tmp-render.py tmp https://raw.githubusercontent.com/L1ghtDream/report/cdn/render.py
+          wget -O tmp-render.py https://raw.githubusercontent.com/L1ghtDream/report/cdn/render.py
 
           python3 tmp-render.py
           git clone https://github.com/L1ghtDream/report
