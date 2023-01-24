@@ -13,9 +13,6 @@ def get_latest(group, artifact):
     """
     URL = API.replace("{group_id}", group).replace("{artifact_id}", artifact)
 
-    print(URL)
-    print(requests.get(url=URL, timeout=10).json())
-    
     return requests.get(url=URL, timeout=10).json()["items"][0]["maven2"]["version"]
 
 
