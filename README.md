@@ -9,7 +9,7 @@
 * dev.lightdream:logger:3.1.0 ![](https://img.shields.io/badge/Up%20To%20Date-3.1.0-green.svg)
 * dev.lightdream:lambda:3.8.1 ![](https://img.shields.io/badge/Up%20To%20Date-3.8.1-green.svg)
 	* dev.lightdream:logger:3.1.0 ![](https://img.shields.io/badge/Up%20To%20Date-3.1.0-green.svg)
-### dev.lightdream:redis-manager:1.13.0 
+### dev.lightdream:redis-manager:1.13.1 
 * dev.lightdream:logger:3.1.0 ![](https://img.shields.io/badge/Up%20To%20Date-3.1.0-green.svg)
 * dev.lightdream:lambda:3.8.1 ![](https://img.shields.io/badge/Up%20To%20Date-3.8.1-green.svg)
 	* dev.lightdream:logger:3.1.0 ![](https://img.shields.io/badge/Up%20To%20Date-3.1.0-green.svg)
