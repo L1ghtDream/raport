@@ -98,13 +98,13 @@ dependencies {
   <details>
 <summary>repo.lightdream.dev</summary>
 
-```groovy
+```kotlin
 repositories {
-    maven { url "https://repo.lightdream.dev/" }
+    maven("https://repo.lightdream.dev/")
 }
 ```
 
-```groovy
+```kotlin
 dependencies {
     implementation("${{ env.GROUP }}:${{ env.ARTIFACT }}:${{ env.VERSION }}")
 }
