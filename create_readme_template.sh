@@ -11,5 +11,5 @@ if [ -f "./readme/description.md" ]; then
     description=$(cat ./readme/description.md)
 fi
 
-cat ./tmp/README-template-i1.md | sed "s/%description%/$description/g" > README-template.md
+cat ./tmp/README-template-i1.md | sed "s/%description%/$description/g" > ./tmp/README-template.md
 
