@@ -76,4 +76,4 @@ If you want to use an older version that is not available in https://repo.lightd
 
 ## How to use
 
-Can be found in the [repository](/example)
+Can be found in the [repository](/src/main/java/example)
