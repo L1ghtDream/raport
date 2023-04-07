@@ -1,3 +1,6 @@
+print("Script Disabled")
+
+"""
 import os
 import json
 
@@ -94,3 +97,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+"""
