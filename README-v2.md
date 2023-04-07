@@ -1,5 +1,5 @@
 
-# ${{ REPOSITORY_NAME }}
+# ${{ env.REPOSITORY_NAME }}
 
 ![Build](../../actions/workflows/build.yml/badge.svg)
 ![Version](https://img.shields.io/badge/Version-${{ env.VERSION }}-red.svg)
