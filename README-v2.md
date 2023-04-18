@@ -53,8 +53,8 @@ repositories {
 }
 
 dependencies {
-    implementation "dev.lightdream:logger:3.1.0"
-    implementation "com.github.L1ghtDream:logger:3.1.0"
+    implementation "dev.lightdream:${{ env.ARTIFACT }}:${{ env.VERSION }}"
+    implementation "com.github.L1ghtDream:${{ env.ARTIFACT }}:${{ env.VERSION }}"
 }
 ```
 
@@ -66,8 +66,8 @@ repositories {
 }
 
 dependencies {
-    implementation("dev.lightdream:logger:3.1.0")
-    implementation("com.github.L1ghtDream:logger:3.1.0")
+    implementation("dev.lightdream:${{ env.ARTIFACT }}:${{ env.VERSION }}")
+    implementation("com.github.L1ghtDream:${{ env.ARTIFACT }}:${{ env.VERSION }}")
 }
 ```
 
