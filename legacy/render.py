@@ -1,6 +1,6 @@
 print("Script Disabled")
+exit (0)
 
-"""
 import json
 
 PROJECTS_DATA = "projects.data"
@@ -63,4 +63,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-"""

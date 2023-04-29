@@ -1,4 +1,4 @@
-# publish.sh [gitlab_header] [github_repository] [github_token] [self_password]
+# publish.sh [github_repository] [github_token] [self_password]
 
 if [ "$#" -ne 3 ]; then
     echo "You are using the old format with the gitlab header which is disabled. Please update your call"
@@ -11,15 +11,6 @@ else
     GITHUB_TOKEN=$2
     SELF_PASSWORD=$3
 fi
-
-# GitLab is considered archived so it is disabled
-
-# gitlab.url = https://gitlab.com/api/v4/projects/41661215/packages/maven/
-# gitlab.auth.header.name = Private-Token
-# gitlab.auth.header.value = $GITLAB_AUTH_HEADER_VALUE
-
-# echo "Publishing to GitLab"
-# gradle publishGitLab || echo "Failed to publish to GitLab"
 
 touch ~/.gradle/gradle.properties
 echo "
