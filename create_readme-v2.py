@@ -18,6 +18,10 @@ if os.path.exists(DESCRIPTION_FILE):
     with open(DESCRIPTION_FILE, "r") as file:
         description = file.read()
 
+if os.path.exists(HOW_FILE):
+    with open(DESCRIPTION_FILE, "r") as file:
+        how = file.read()
+
 PLACEHOLDERS = {
     "description": description,
     "how": how,
