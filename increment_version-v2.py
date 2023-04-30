@@ -4,7 +4,7 @@
 
 import os
 
-os.system("./gradlew properties -q | grep \"^version:\" | awk \'{print $2}\' > tmp-current_version")
+os.system("gradle properties -q | grep \"^version:\" | awk \'{print $2}\' > tmp-current_version")
 
 version_file = open("tmp-current_version", "r")
 version_containers_files = ["gradle/libs.versions.toml", "build.gradle.kts", "build.gradle"]
