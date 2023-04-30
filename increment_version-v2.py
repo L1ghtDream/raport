@@ -4,12 +4,19 @@
 
 import os
 
+version_containers_files = ["gradle/libs.versions.toml", "build.gradle.kts", "build.gradle"]
+
 os.system("gradle properties -q | grep \"^version:\" | awk \'{print $2}\' > tmp-current_version")
 
 version_file = open("tmp-current_version", "r")
-version_containers_files = ["gradle/libs.versions.toml", "build.gradle.kts", "build.gradle"]
 
 current_version = version_file.read().replace("\n", "").replace(" ", "")
+
+if current_version == "":
+    os.system("chmod u+x gradlew")
+    os.system("./gradlew properties -q | grep \"^version:\" | awk \'{print $2}\' > tmp-current_version")
+    version_file = open("tmp-current_version", "r")
+    current_version = version_file.read().replace("\n", "").replace(" ", "")
 
 version_codes = current_version.split(".")
 
