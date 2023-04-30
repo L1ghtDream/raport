@@ -83,4 +83,4 @@ using https://archive-repo.lightdream.dev
 
 ## How to use
 
-Can be found in the [repository](/src/main/java/example)
+%how%
